@@ -1,13 +1,3 @@
----
-title: jsdoc-with-ts-declaration
-date: 2019-09-22 17:20:00
-author: betgar
-tags: [typescript]
-categories: [typescript]
----
-
-
-
 # JSDoc使用TS声明文件提供智能提示
 
 > 背景：最近做的内部使用的管理系统，使用`es6` 构建，之前一直使用typescript构建项目，感觉到写声明文件真的很烦很浪费时间。这次使用`es6`构建项目，发现效率更低，没有智能提示浪费的时间比写声明文件的多了好几倍。
@@ -90,7 +80,7 @@ var fn = (params) => {
 > typescript支持在jsdoc的注释中导入ts declaration file的类型声明
 
 ### 完整的例子
-
+> https://github.com/betgar/jsdoc-ts
 ```typescript
 // src/types/index.d.ts
 import { AxiosPromise } from "axios";
