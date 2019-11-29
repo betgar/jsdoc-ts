@@ -1,8 +1,15 @@
 import Vue from 'vue'
-import App from './App.vue'
+import { loginService } from './common/login/services'
+import { setup as setupVueExt } from './vue-ext/index'
 
-Vue.config.productionTip = false
+setupVueExt(Vue, {})
 
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
+const rootVue = new Vue({
+  created () {
+    loginService({
+      account: '123',
+      password: '1231'
+    }).then(this.$apiResolver).catch(this.$apiRejecter)
+  }
+})
+
